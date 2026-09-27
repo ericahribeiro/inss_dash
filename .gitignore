@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+.idea/
+dados_brutos/
+*.parcial
+.streamlit/secrets.toml
