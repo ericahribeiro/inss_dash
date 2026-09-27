@@ -171,6 +171,14 @@ k4.metric("Tempo típico até concessão judicial", meses_txt(t_jud),
 if n_dec < MIN_CASOS:
     st.warning("Amostra pequena para esse perfil (menos de 30 pedidos). Os percentuais podem "
                "variar muito — tente ampliar a faixa etária ou o período.")
+if especie.startswith("Aposentadoria"):
+    st.info("**Atenção ao ler a aprovação deste benefício.** A aposentadoria por incapacidade "
+            "permanente quase nunca é pedida diretamente: em geral ela nasce da conversão de um "
+            "auxílio por incapacidade temporária após a perícia. Por isso há poucos indeferimentos "
+            "registrados nesta espécie (as negativas ficam no auxílio), e a taxa de aprovação sai "
+            "artificialmente alta. Para avaliar a chance de negativa na via administrativa, consulte "
+            "o **auxílio por incapacidade temporária**. O percentual via Justiça e o tempo até a "
+            "concessão continuam válidos.")
 
 esq, dir_ = st.columns([1.2, 1])
 with esq:
